@@ -1,0 +1,4 @@
+
+º%squid:RedundantThrowsDeclarationCheck'"}Remove the declaration of thrown exception 'java.io.UnsupportedEncodingException', as it cannot be thrown from method's body.(ƒÛ¸©ùÿÿÿÿ8€Ñ†°½-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ˆ±Êûüÿÿÿÿ8äóó…½-
+µ%squid:RedundantThrowsDeclarationCheck4"}Remove the declaration of thrown exception 'java.io.UnsupportedEncodingException', as it cannot be thrown from method's body.(ú ë˜8þ‰‡°½-

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+
+<head>
+    <title>Transaction</title>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="container my-5">
+        <h2 class="text-center">List Transaction</h2>
+        <a th:href="@{/webTransaction/checkout}">
+            <button type="button" class="btn btn-outline-dark mb-3"><i class="fa fa-user-plus"></i>Buy</button>
+        </a>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID Transaction</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Item Total</th>
+                <th scope="col">Total</th>
+                <th scope="col">Balance</th>
+                <th scope="col">View</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="transaction : ${allTransaction}">
+                <th th:text="${transaction.idTransaction}" scope="row">1</th>
+                <td th:text="${transaction.username}"></td>
+                <td th:text="${transaction.namaBarang}"></td>
+                <td th:text="${transaction.qtyTransaction}"></td>
+                <td th:inline="text">Rp [[${#numbers.formatDecimal(transaction.totalTransaction, 0, 'COMMA', 2, 'POINT')}]]</td>
+                <td th:inline="text">Rp [[${#numbers.formatDecimal(transaction.saldoUser, 0, 'COMMA', 2, 'POINT')}]]</td>
+                <td><a th:href="@{|detailsTransaction/${transaction.idTransaction}|}" class="btn btn-dark text-white" >View</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

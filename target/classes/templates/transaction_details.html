@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+
+<head>
+    <title>Transaction Details</title>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="container my-3">
+        <h2 class="text-center">TRANSACTION DETAILS</h2>
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">ID Transaction: [[${allTransaction.idTransaction}]]</h5>
+                <p class="card-text">Username: [[${allTransaction.username}]]</p>
+                <p class="card-text">Product Name: [[${allTransaction.namaBarang}]]</p>
+                <p class="card-text">Item Total: [[${allTransaction.qtyTransaction}]]</p>
+                <p th:inline="text">Total: Rp [[${#numbers.formatDecimal(allTransaction.totalTransaction, 0, 'COMMA', 2, 'POINT')}]]</p>
+                <p th:inline="text">Balance: Rp [[${#numbers.formatDecimal(allTransaction.saldoUser, 0, 'COMMA', 2, 'POINT')}]]</p>
+                <a th:href="@{/webTransaction/pageTransaction}" class="btn btn-dark">Go Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

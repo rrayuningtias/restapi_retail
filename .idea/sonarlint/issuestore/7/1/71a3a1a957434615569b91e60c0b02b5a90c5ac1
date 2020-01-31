@@ -1,0 +1,9 @@
+
+Usquid:S14812"7Remove this unused "transactionRespDTO" local variable.(åÙüñ8ŞœÕŒ¼-
+msquid:UselessImportCheck"=Remove this unused import 'com.learn.restapi.dto.UserReqDTO'.(«±Ùßûÿÿÿÿ8Ùé ˆ¼-
+dsquid:S18542"FRemove this useless assignment to local variable "transactionRespDTO".(åÙüñ8ŞœÕŒ¼-
+rsquid:S1192+"ODefine a constant instead of duplicating this literal "allTransaction" 3 times.(ï×¯úÿÿÿÿ8‡è€ğ¹-
+ysquid:UselessImportCheck"NRemove this unused import 'org.springframework.web.servlet.view.RedirectView'.(ñÎ²Ò8íõ÷¹¹-
+xsquid:S11921"UDefine a constant instead of duplicating this literal "transaction_checkout" 3 times.(ÁÑêÈûÿÿÿÿ8ÍïáŒ¼-
+~squid:UselessImportCheck"NRemove this unused import 'com.learn.restapi.exception.DataNotFoundException'.(½‹š‚ÿÿÿÿÿ8ç÷ÕŒ¼-
+qsquid:UselessImportCheck"FRemove this unused import 'com.learn.restapi.LearnRestAPIApplication'.(¾Æï¬8’°´ˆ¼-

@@ -1,0 +1,15 @@
+
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8å•‡ƒ½-
+Nsquid:S4432="0Use Galois/Counter Mode (GCM/NoPadding) instead.(­ĞÉì8ˆø†ƒ½-
+[
+squid:S1061"9Replace this use of System.out or System.err by a logger.(ÑĞœ†ûÿÿÿÿ8¼Ø€ƒ½-
+osquid:S1450"RRemove the "key" field and declare it as a local variable in the relevant methods.(ˆÉä8¼Ø€ƒ½-
+Fsquid:S1148""#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ô¶†ƒ½-
+Ysquid:S2696"6Make the enclosing method "static" or remove this set.(ş—¼…üÿÿÿÿ8åŠ‘ˆ½-
+Ssquid:S4432+"0Use Galois/Counter Mode (GCM/NoPadding) instead.(Ü øùÿÿÿÿ8ˆø†ƒ½-
+Tsquid:S2696"6Make the enclosing method "static" or remove this set.(„Ú¶‡8åŠ‘ˆ½-
+Ysquid:S2696"6Make the enclosing method "static" or remove this set.(Ä£ÓÀúÿÿÿÿ8åŠ‘ˆ½-
+Tsquid:S2696"6Make the enclosing method "static" or remove this set.(Ê¿ÀÒ8åŠ‘ˆ½-
+[
+squid:S106C"9Replace this use of System.out or System.err by a logger.(Ï¢şıÿÿÿÿ8¼Ø€ƒ½-
+bsquid:S2147!"DCombine this catch with the one at line 30, which has the same body.(ÃÁ‰‡8¼Ø€ƒ½-

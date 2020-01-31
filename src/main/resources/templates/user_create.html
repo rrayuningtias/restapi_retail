@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+
+<head>
+    <title>Create User</title>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="container my-3">
+        <div class="card center" style="width: 75rem">
+            <div class="card-body">
+                <h5 class="card-center-title">CREATE USER</h5>
+                <div class="dropdown-divider"></div>
+                <form th:action="@{createUser}" th:object="${user}" method="POST">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label >Username</label>
+                                <input type="text" class="form-control" name="username" placeholder="Input Username..." >
+                                <div class="alert alert-danger pt-0 pb-0 mt-1 mb-1" th:if="${errorName != null}"><p class="text-danger font-weight-light mb-0" th:inline="text"><i class="fa fa-bullhorn"></i> [[${errorName}]]</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label >Saldo User</label>
+                                <input type="number" class="form-control" name="saldoUser" placeholder="Input Saldo..." >
+                                <div class="alert alert-danger pt-0 pb-0 mt-1 mb-1" th:if="${errorSaldo != null}"><p class="text-danger font-weight-light mb-0" th:inline="text"><i class="fa fa-bullhorn"></i> [[${errorSaldo}]]</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#submituser">
+                        Submit
+                    </button>
+
+                    <div class="modal fade" id="submituser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure to add this user?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

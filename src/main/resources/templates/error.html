@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+
+<head>
+    <title>Error Alert</title>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="container my-3">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">AKSES DITOLAK!</h4>
+            <p>Maaf kamu tidak punya akses untuk melanjutkan proses ini.</p>
+        </div>
+    </div>
+</div>
+
+</body></html>

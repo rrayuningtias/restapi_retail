@@ -1,0 +1,4 @@
+
+nsquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(Ê’ü‰úÿÿÿÿ8†æç½-
+qsquid:UselessImportCheck"GRemove this unused import 'javax.persistence.criteria.CriteriaBuilder'.(É¿F8Üë½-
+psquid:S1192%"MDefine a constant instead of duplicating this literal "allWarehouse" 6 times.(ÅòÕ¢ÿÿÿÿÿ8’ôó”¹-

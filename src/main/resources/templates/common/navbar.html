@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<th:block th:fragment="navbar">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" th:href="@{/home/index}">RETAIL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="bg-dark p-4">
+                <a class="dropdown-item" th:href="@{/webUser/pageUser}" >User<span class="sr-only">(current)</span></a>
+                <a class="dropdown-item" th:href="@{/webWarehouse/pageWarehouse}" >Warehouse</a>
+                <a class="dropdown-item" th:href="@{/webTransaction/pageTransaction}" >Transaction</a>
+            </div>
+            <form name = "f" th:action="@{/logout}" method="post">
+                <button class="btn btn-icon btn-outline-light" type="submit">
+                    <span class="btn-inner-icon">Logout</span>
+                </button>
+            </form>
+        </div>
+
+        </div>
+    </nav>
+</th:block>
+
+</body>
+</html>

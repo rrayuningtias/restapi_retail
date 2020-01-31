@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:replace="common/header"></th:block>
+</head>
+<body>
+    <th:block th:replace="common/navbar"></th:block>
+
+    <div class="main-content">
+        <th:block layout:fragment="content"></th:block>
+    </div>
+
+    <!--<th:block th:replace="common/footer"></th:block>-->
+
+    <th:block th:replace="common/script"></th:block>
+</body>
+</html>

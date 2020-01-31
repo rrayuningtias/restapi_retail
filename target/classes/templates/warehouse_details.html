@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+
+<head>
+    <title>Warehouse Details</title>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="container my-3">
+        <h2 class="text-center">DETAILS PRODUCT</h2>
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">ID Product: [[${allWarehouse.id}]]</h5>
+                <p class="card-text">Name of Product: [[${allWarehouse.namaBarang}]]</p>
+                <p class="card-text">Price: Rp [[${#numbers.formatDecimal(allWarehouse.hargaBarang, 0, 'COMMA', 2, 'POINT')}]]</p>
+                <p class="card-text">Stock: [[${allWarehouse.stockBarang}]]</p>
+                <a th:href="@{/webWarehouse/pageWarehouse}" class="btn btn-dark">Go Back</a>
+                <a th:href="@{|updateWarehouse/${allWarehouse.idWHEncrypt}|}" class="btn btn-warning">Edit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

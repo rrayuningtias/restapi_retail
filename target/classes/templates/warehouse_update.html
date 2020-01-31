@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout.html}">
+
+<head>
+    <title>Update Details</title>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div class="container my-3">
+        <div class="card center">
+            <div class="card-body">
+                <h5 class="card-center-title">EDIT PRODUCT</h5>
+                <div class="dropdown-divider"></div>
+                <div class="widhtform">
+                    <form th:action="@{|/webWarehouse/detailsWarehouse/updateWarehouse/${allWarehouse.idWHEncrypt}|}" th:object="${allWarehouse}" method="POST">
+                        <div class="form-group">
+                            <label >Name of Product</label>
+                            <input type="text" class="form-control" name="namaBarang" placeholder="Input name of product.." required th:value="${allWarehouse.namaBarang}">
+                            <div class="alert alert-danger pt-0 pb-0 mt-1 mb-1" th:if="${errorProductName != null}"><p class="text-danger font-weight-light mb-0" th:inline="text"><i class="fa fa-bullhorn"></i> [[${errorProductName}]]</p></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="number" class="form-control" name="hargaBarang" placeholder="Input price.." required th:value="${allWarehouse.hargaBarang}">
+                            <div class="alert alert-danger pt-0 pb-0 mt-1 mb-1" th:if="${errorPrice != null}"><p class="text-danger font-weight-light mb-0" th:inline="text"><i class="fa fa-bullhorn"></i> [[${errorPrice}]]</p></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Stock</label>
+                            <input type="number" class="form-control" name="stockBarang" placeholder="Input stock.." required th:value="${allWarehouse.stockBarang}">
+                            <div class="alert alert-danger pt-0 pb-0 mt-1 mb-1" th:if="${errorStock != null}"><p class="text-danger font-weight-light mb-0" th:inline="text"><i class="fa fa-bullhorn"></i> [[${errorStock}]]</p></div>
+                        </div>
+                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#updatewarehouse">
+                            Submit
+                        </button>
+
+                        <div class="modal fade" id="updatewarehouse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure to update this item?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
